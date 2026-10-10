@@ -1,85 +1,52 @@
-// Setup Canvas for Starry Background
-const canvas = document.getElementById('starCanvas');
-const ctx = canvas.getContext('2d');
+// Generate Silver Stars for Midnight Dark Sky
+function createStars() {
+    const numStars = 200;
+    const container = document.getElementById('star-container');
+    const width = window.innerWidth;
+    const height = window.innerHeight;
 
-let width, height, stars;
-
-// Initialize canvas size and stars
-function init() {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
-    stars = [];
-    
-    // Create stars
-    const numStars = Math.floor((width * height) / 2000); // Density of stars
     for (let i = 0; i < numStars; i++) {
-        stars.push({
-            x: Math.random() * width,
-            y: Math.random() * height,
-            radius: Math.random() * 1.5,
-            speed: Math.random() * 0.5 + 0.1,
-            opacity: Math.random()
-        });
+        const star = document.createElement('div');
+        star.classList.add('star');
+        
+        // Random positioning
+        const x = Math.random() * 100; // vw
+        const y = Math.random() * 100; // vh
+        
+        // Random size - mostly small, some bigger silver stars
+        const size = Math.random() * 2.5;
+        
+        // Animation config
+        const delay = Math.random() * 5;
+        const duration = 2 + Math.random() * 3;
+
+        star.style.left = `${x}vw`;
+        star.style.top = `${y}vh`;
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
+        star.style.animationDelay = `${delay}s`;
+        star.style.animationDuration = `${duration}s`;
+
+        container.appendChild(star);
     }
 }
 
-// Animate Stars
-function animate() {
-    ctx.clearRect(0, 0, width, height);
-    
-    // Create sky gradient (very subtle)
-    let gradient = ctx.createLinearGradient(0, 0, 0, height);
-    gradient.addColorStop(0, '#050508');
-    gradient.addColorStop(1, '#0a0a14');
-    ctx.fillStyle = gradient;
-    ctx.fillRect(0, 0, width, height);
+// Initial setup
+createStars();
 
-    ctx.fillStyle = '#c0c0c0'; // Silver stars
-    
-    stars.forEach(star => {
-        ctx.beginPath();
-        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-        
-        // Twinkling effect
-        star.opacity += (Math.random() - 0.5) * 0.1;
-        if (star.opacity < 0.2) star.opacity = 0.2;
-        if (star.opacity > 1) star.opacity = 1;
-        
-        ctx.fillStyle = `rgba(192, 192, 192, ${star.opacity})`;
-        ctx.fill();
-        
-        // Move stars upward slowly to simulate floating in space
-        star.y -= star.speed;
-        
-        // Reset star to bottom if it goes off screen
-        if (star.y < 0) {
-            star.y = height;
-            star.x = Math.random() * width;
-        }
-    });
-    
-    requestAnimationFrame(animate);
-}
-
-// Handle Resize
+// Recreate stars on resize for better coverage
 window.addEventListener('resize', () => {
-    init();
+    const container = document.getElementById('star-container');
+    container.innerHTML = '';
+    createStars();
 });
-
-// Start Animation
-init();
-animate();
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
     });
 });
