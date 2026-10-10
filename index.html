@@ -3,103 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhanishtha Bhangale | Portfolio</title>
+    <title>Dhanishtha Bhangale | Celestial Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Dhanishtha.</div>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="hamburger">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </nav>
+    <!-- Starry Background Canvas -->
+    <canvas id="starCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">DB.</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#blog">Blog</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">Dhanishtha</span></h1>
+            <h2>Data Science Student & Aspiring Developer</h2>
+            <p>Exploring the universe of data, code, and AI from Usha Mittal College of Engineering.</p>
+            <div class="social-links">
+                <a href="https://github.com/Dhanishttha" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/dhanishthabhangale" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:dhanishthabhangale@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        
+        <!-- Astronaut Graphics Area -->
+        <div class="astronaut-gallery">
+            <div class="astro-card bounce-1">
+                <img src="https://placehold.co/200x200/0d0d1a/e0e0e0?text=Astronaut\n(Fox+Tail+&+Cat+Ears)&font=roboto" alt="Astronaut with fox tail and cat ears">
+            </div>
+            <div class="astro-card bounce-2">
+                <img src="https://placehold.co/200x200/0d0d1a/e0e0e0?text=Astronaut\n(Planet+Plushie)&font=roboto" alt="Astronaut holding a planet like a plushie">
+            </div>
+            <div class="astro-card bounce-3">
+                <img src="https://placehold.co/200x200/0d0d1a/e0e0e0?text=Astronaut\n(Bunny+Ears)&font=roboto" alt="Astronaut with bunny ears">
+            </div>
         </div>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Hi, I'm <span class="highlight">Dhanishtha Bhangale</span></h1>
-                    <h2>Data Science Student</h2>
-                    <p>I'm a first-year student at Usha Mittal College of Engineering, passionate about learning, coding, and building new things.</p>
-                    <a href="#contact" class="btn">Let's Connect</a>
-                </div>
-                <div class="hero-image">
-                    <!-- Placeholder for a profile picture -->
-                    <div class="image-placeholder"><i class="fas fa-user-graduate"></i></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="about">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="about-content">
-                    <p>Welcome to my first website! I am currently in my first year studying Data Science at Usha Mittal College of Engineering. I love exploring new technologies, especially in the realm of Artificial Intelligence and web development. I believe in continuous learning and clear communication.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="skills">
-            <div class="container">
-                <h2 class="section-title">My Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-card"><i class="fab fa-html5"></i> <span>HTML</span></div>
-                    <div class="skill-card"><i class="fab fa-css3-alt"></i> <span>CSS</span></div>
-                    <div class="skill-card"><i class="fab fa-js"></i> <span>JavaScript</span></div>
-                    <div class="skill-card"><i class="fab fa-git-alt"></i> <span>Git</span></div>
-                    <div class="skill-card"><i class="fas fa-robot"></i> <span>AI</span></div>
-                    <div class="skill-card"><i class="fas fa-comments"></i> <span>Communication</span></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="blog" class="blog">
-            <div class="container">
-                <h2 class="section-title">My Blog</h2>
-                <div class="blog-grid">
-                    <article class="blog-card">
-                        <div class="blog-content">
-                            <h3>My First Step into Tech</h3>
-                            <p class="date">October 10, 2026</p>
-                            <p>Starting my journey in Data Science and building this very first portfolio website...</p>
-                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <!-- More blog posts can be added here -->
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <p>Feel free to reach out to me for collaborations or just a friendly chat!</p>
-                <div class="social-links">
-                    <a href="mailto:dhanishthabhangale@gmail.com" class="social-icon" title="Email"><i class="fas fa-envelope"></i></a>
-                    <a href="https://github.com/Dhanishttha" target="_blank" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/dhanishthabhangale" target="_blank" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Dhanishtha Bhangale. All rights reserved.</p>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2 class="section-title">About Me <span>✦</span></h2>
+        <div class="section-content">
+            <p>I am a passionate first-year Data Science student at Usha Mittal College of Engineering. This is my very first website, and I designed it to reflect my love for space and minimal aesthetics. I am eager to learn, grow, and build intelligent systems that make a difference.</p>
         </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2 class="section-title">My Skills <span>✦</span></h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fab fa-html5"></i>
+                <span>HTML</span>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-css3-alt"></i>
+                <span>CSS</span>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-js"></i>
+                <span>JavaScript</span>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-git-alt"></i>
+                <span>Git</span>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-brain"></i>
+                <span>AI</span>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-comments"></i>
+                <span>Communication</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section">
+        <h2 class="section-title">Captain's Log (Blog) <span>✦</span></h2>
+        <div class="blog-grid">
+            <article class="blog-post">
+                <div class="post-date">October 10, 2026</div>
+                <h3>My First Step into the Web Cosmos</h3>
+                <p>Welcome to my very first website! Building this celestial-themed portfolio has been an incredible journey of learning HTML, CSS, and JavaScript. Stay tuned as I share more about my data science adventures.</p>
+                <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </article>
+            <article class="blog-post">
+                <div class="post-date">Coming Soon</div>
+                <h3>Diving into Data Science</h3>
+                <p>A look at my first-year experiences at Usha Mittal College of Engineering, and what I've learned about the fascinating world of data so far.</p>
+                <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Dhanishtha Bhangale. Built with 🤍 under the silver stars.</p>
     </footer>
 
     <script src="script.js"></script>

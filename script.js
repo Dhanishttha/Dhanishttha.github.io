@@ -1,38 +1,85 @@
-// Mobile menu toggle
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
+// Setup Canvas for Starry Background
+const canvas = document.getElementById('starCanvas');
+const ctx = canvas.getContext('2d');
 
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
+let width, height, stars;
 
-// Close mobile menu when a link is clicked
-document.querySelectorAll('.nav-links li a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-    });
-});
+// Initialize canvas size and stars
+function init() {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+    stars = [];
+    
+    // Create stars
+    const numStars = Math.floor((width * height) / 2000); // Density of stars
+    for (let i = 0; i < numStars; i++) {
+        stars.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            radius: Math.random() * 1.5,
+            speed: Math.random() * 0.5 + 0.1,
+            opacity: Math.random()
+        });
+    }
+}
 
-// Simple animation for elements on scroll
-const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-};
+// Animate Stars
+function animate() {
+    ctx.clearRect(0, 0, width, height);
+    
+    // Create sky gradient (very subtle)
+    let gradient = ctx.createLinearGradient(0, 0, 0, height);
+    gradient.addColorStop(0, '#050508');
+    gradient.addColorStop(1, '#0a0a14');
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, width, height);
 
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-            observer.unobserve(entry.target);
+    ctx.fillStyle = '#c0c0c0'; // Silver stars
+    
+    stars.forEach(star => {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+        
+        // Twinkling effect
+        star.opacity += (Math.random() - 0.5) * 0.1;
+        if (star.opacity < 0.2) star.opacity = 0.2;
+        if (star.opacity > 1) star.opacity = 1;
+        
+        ctx.fillStyle = `rgba(192, 192, 192, ${star.opacity})`;
+        ctx.fill();
+        
+        // Move stars upward slowly to simulate floating in space
+        star.y -= star.speed;
+        
+        // Reset star to bottom if it goes off screen
+        if (star.y < 0) {
+            star.y = height;
+            star.x = Math.random() * width;
         }
     });
-}, observerOptions);
+    
+    requestAnimationFrame(animate);
+}
 
-document.querySelectorAll('section').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(20px)';
-    section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-    observer.observe(section);
+// Handle Resize
+window.addEventListener('resize', () => {
+    init();
+});
+
+// Start Animation
+init();
+animate();
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
 });
