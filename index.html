@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dhanishtha Bhangale | Data Science Student & Creative Coder</title>
+  <meta name="description" content="Personal portfolio of Dhanishtha Bhangale - 1st Year Data Science Student at Usha Mittal College of Engineering." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Sacramento&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Ambient Floating Background Effect -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-sparkle">✦</span>
+        <span class="logo-text">dhanishtha</span>
+        <span class="logo-dot">.</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#blog" class="nav-link">Blog</a>
+        <a href="#contact" class="nav-btn-link">
+          <span class="btn-bubble">Say Hello 🌸</span>
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="welcome-badge">
+            <span class="badge-icon">✨</span>
+            <span>Welcome to my digital corner</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="highlight-name">Dhanishtha</span>
+            <span class="hand-wave">👋</span>
+          </h1>
+
+          <div class="hero-subtitle-container">
+            <span class="hero-static">I am a </span>
+            <span class="typing-text" id="typing-text"></span>
+            <span class="cursor">&nbsp;</span>
+          </div>
+
+          <p class="hero-description">
+            First-year Data Science student at <strong>Usha Mittal College of Engineering</strong>. 
+            Blending logic, aesthetics, and curiosity to craft beautiful web interfaces and explore the boundless potential of Artificial Intelligence.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="primary-btn">
+              <span>Explore My Work</span>
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </a>
+            <a href="#contact" class="secondary-btn">
+              <span>Let's Connect</span>
+            </a>
+          </div>
+
+          <div class="hero-social-links">
+            <span class="social-label">Find me on:</span>
+            <div class="social-icons">
+              <a href="https://github.com/Dhanishttha" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub Profile">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/dhanishthabhangale" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="mailto:dhanishthabhangale@gmail.com" class="social-icon" title="Direct Email">
+                <i class="fa-regular fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="avatar-card-wrapper">
+            <div class="glow-orb orb-1"></div>
+            <div class="glow-orb orb-2"></div>
+            
+            <div class="avatar-card">
+              <div class="card-glass-inner">
+                <div class="avatar-illustration">
+                  <div class="avatar-circle">
+                    <span class="avatar-emoji">👩‍💻</span>
+                  </div>
+                  <div class="floating-badge badge-top">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Curious Learner</span>
+                  </div>
+                  <div class="floating-badge badge-bottom">
+                    <i class="fa-solid fa-brain"></i>
+                    <span>Data Science '28</span>
+                  </div>
+                </div>
+
+                <div class="card-caption">
+                  <h3>Dhanishtha Bhangale</h3>
+                  <p>UMIT • Data Science Undergrad</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">get to know me</span>
+          <h2 class="section-title">About <span>Myself</span></h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text-card">
+            <h3 class="about-heading">
+              A curious mind with a passion for <span class="gradient-text">data & creative web design</span> 🌷
+            </h3>
+            <p>
+              Hello! I'm <strong>Dhanishtha Bhangale</strong>, a first-year undergraduate pursuing 
+              <strong>Data Science</strong> at <strong>Usha Mittal College of Engineering (UMIT)</strong>. 
+              My journey began with a natural fascination for how computers process information and how thoughtful design can turn complex concepts into delightful experiences.
+            </p>
+            <p>
+              I love breaking down problems, learning how algorithms uncover patterns, and bringing creative ideas to life through <strong>HTML, CSS, and JavaScript</strong>. 
+              Beyond coding, I place high value on <strong>empathetic communication</strong> and continuous collaboration.
+            </p>
+
+            <div class="info-pill-container">
+              <div class="info-pill">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div>
+                  <strong>College</strong>
+                  <span>Usha Mittal College of Engineering</span>
+                </div>
+              </div>
+              <div class="info-pill">
+                <i class="fa-solid fa-chart-pie"></i>
+                <div>
+                  <strong>Discipline</strong>
+                  <span>B.Tech in Data Science (Year 1)</span>
+                </div>
+              </div>
+              <div class="info-pill">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <strong>Focus</strong>
+                  <span>Web Dev, AI Foundations & Data</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-highlights-card">
+            <h4 class="highlights-title">What I Cherish 💖</h4>
+            <div class="highlight-item">
+              <div class="highlight-icon">🌱</div>
+              <div class="highlight-content">
+                <h5>Lifelong Learning</h5>
+                <p>Every single day is an opportunity to learn a new syntax, an AI model concept, or a smarter workflow.</p>
+              </div>
+            </div>
+
+            <div class="highlight-item">
+              <div class="highlight-icon">🎨</div>
+              <div class="highlight-content">
+                <h5>Aesthetic & Clean Code</h5>
+                <p>Believer in the philosophy that web interfaces should be as elegant and warm as they are functional.</p>
+              </div>
+            </div>
+
+            <div class="highlight-item">
+              <div class="highlight-icon">💬</div>
+              <div class="highlight-content">
+                <h5>Clear Communication</h5>
+                <p>Translating complex technical thoughts into clear, accessible language for teams and end-users.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section" id="skills">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">my toolkit</span>
+          <h2 class="section-title">Skills & <span>Capabilities</span></h2>
+          <div class="title-underline"></div>
+          <p class="section-subtitle">
+            Technologies, tools, and interpersonal strengths I'm cultivating on my tech journey.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Web Development Category -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-wrap icon-pink">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <h3>Frontend & Web</h3>
+            </div>
+            <div class="skills-tags">
+              <div class="skill-chip">
+                <i class="fa-brands fa-html5"></i>
+                <span>HTML5</span>
+              </div>
+              <div class="skill-chip">
+                <i class="fa-brands fa-css3-alt"></i>
+                <span>CSS3</span>
+              </div>
+              <div class="skill-chip">
+                <i class="fa-brands fa-js"></i>
+                <span>JavaScript</span>
+              </div>
+              <div class="skill-chip">
+                <i class="fa-solid fa-mobile-screen"></i>
+                <span>Responsive Design</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Data Science & AI Category -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-wrap icon-rose">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <h3>Data & AI Foundations</h3>
+            </div>
+            <div class="skills-tags">
+              <div class="skill-chip">
+                <i class="fa-solid fa-robot"></i>
+                <span>Artificial Intelligence</span>
+              </div>
+              <div class="skill-chip">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Data Science Concepts</span>
+              </div>
+              <div class="skill-chip">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                <span>Problem Solving</span>
+              </div>
+              <div class="skill-chip">
+                <i class="fa-solid fa-database"></i>
+                <span>Logical Reasoning</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools & Collaboration -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-wrap icon-blush">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+              </div>
+              <h3>Tools & Version Control</h3>
+            </div>
+            <div class="skills-tags">
+              <div class="skill-chip">
+                <i class="fa-brands fa-git-alt"></i>
+                <span>Git</span>
+              </div>
+              <div class="skill-chip">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+              </div>
+              <div class="skill-chip">
+                <i class="fa-solid fa-code"></i>
+                <span>VS Code</span>
+              </div>
+              <div class="skill-chip">
+                <i class="fa-solid fa-terminal"></i>
+                <span>Command Line</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interpersonal Skills -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-wrap icon-lavender">
+                <i class="fa-regular fa-comments"></i>
+              </div>
+              <h3>Soft Skills</h3>
+            </div>
+            <div class="skills-tags">
+              <div class="skill-chip">
+                <i class="fa-solid fa-bullhorn"></i>
+                <span>Communication</span>
+              </div>
+              <div class="skill-chip">
+                <i class="fa-solid fa-users"></i>
+                <span>Team Collaboration</span>
+              </div>
+              <div class="skill-chip">
+                <i class="fa-solid fa-clock"></i>
+                <span>Time Management</span>
+              </div>
+              <div class="skill-chip">
+                <i class="fa-solid fa-lightbulb"></i>
+                <span>Creative Thinking</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">what i have built</span>
+          <h2 class="section-title">Featured <span>Projects</span></h2>
+          <div class="title-underline"></div>
+          <p class="section-subtitle">
+            A showcase of my hands-on practice, coding experiments, and early technical explorations.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-preview preview-pink">
+              <div class="preview-badge">Featured</div>
+              <div class="preview-icon">🌸</div>
+            </div>
+            <div class="project-details">
+              <div class="project-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <h3 class="project-title">Personal Pink Portfolio</h3>
+              <p class="project-desc">
+                My very first personal website designed with a minimalist pink aesthetic, smooth micro-interactions, responsive navigation, and an interactive blog modal.
+              </p>
+              <div class="project-footer">
+                <a href="https://github.com/Dhanishttha" target="_blank" rel="noopener noreferrer" class="project-btn">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+                <a href="#hero" class="project-btn demo-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-preview preview-rose">
+              <div class="preview-badge">Data Science</div>
+              <div class="preview-icon">📊</div>
+            </div>
+            <div class="project-details">
+              <div class="project-tags">
+                <span class="tag">AI</span>
+                <span class="tag">Analytics</span>
+                <span class="tag">Data Insights</span>
+              </div>
+              <h3 class="project-title">Data Insights & Trends Explorer</h3>
+              <p class="project-desc">
+                Exploratory project analyzing foundational student datasets to discover patterns and visualize academic statistics using modern visual charts.
+              </p>
+              <div class="project-footer">
+                <a href="https://github.com/Dhanishttha" target="_blank" rel="noopener noreferrer" class="project-btn">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+                <button class="project-btn demo-btn" onclick="openToast('Exploring data insights demo!')">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card">
+            <div class="project-preview preview-peach">
+              <div class="preview-badge">AI Exploration</div>
+              <div class="preview-icon">🤖</div>
+            </div>
+            <div class="project-details">
+              <div class="project-tags">
+                <span class="tag">AI Concepts</span>
+                <span class="tag">Web Logic</span>
+                <span class="tag">Git</span>
+              </div>
+              <h3 class="project-title">Interactive AI Prompt Companion</h3>
+              <p class="project-desc">
+                A simple and friendly tool designed for first-year students to craft better structured queries and study prompts for artificial intelligence models.
+              </p>
+              <div class="project-footer">
+                <a href="https://github.com/Dhanishttha" target="_blank" rel="noopener noreferrer" class="project-btn">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+                <button class="project-btn demo-btn" onclick="openToast('Prompt companion coming up!')">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section" id="blog">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">thoughts & notes</span>
+          <h2 class="section-title">My <span>Blog</span></h2>
+          <div class="title-underline"></div>
+          <p class="section-subtitle">
+            Stories, learnings, and personal reflections from my first year in Data Science.
+          </p>
+        </div>
+
+        <div class="blog-grid">
+          <!-- Blog Card 1 -->
+          <article class="blog-card" onclick="openBlogModal('post-1')">
+            <div class="blog-header-meta">
+              <span class="blog-category">College Life</span>
+              <span class="blog-read-time"><i class="fa-regular fa-clock"></i> 3 min read</span>
+            </div>
+            <h3 class="blog-title">Stepping into UMIT: My First Year in Data Science</h3>
+            <p class="blog-snippet">
+              Walking into Usha Mittal College of Engineering on day one was a mix of nervous butterflies and big dreams. Here is what my initial weeks taught me...
+            </p>
+            <div class="blog-card-footer">
+              <span class="read-more-link">Read Full Story <span>→</span></span>
+              <span class="blog-date">Oct 2024</span>
+            </div>
+          </article>
+
+          <!-- Blog Card 2 -->
+          <article class="blog-card" onclick="openBlogModal('post-2')">
+            <div class="blog-header-meta">
+              <span class="blog-category">Web Dev</span>
+              <span class="blog-read-time"><i class="fa-regular fa-clock"></i> 4 min read</span>
+            </div>
+            <h3 class="blog-title">Building My Very First Website from Scratch</h3>
+            <p class="blog-snippet">
+              How HTML, CSS, and JavaScript transformed from abstract syntax into a beautiful, pastel-toned reality that I can proudly call my own digital home.
+            </p>
+            <div class="blog-card-footer">
+              <span class="read-more-link">Read Full Story <span>→</span></span>
+              <span class="blog-date">Nov 2024</span>
+            </div>
+          </article>
+
+          <!-- Blog Card 3 -->
+          <article class="blog-card" onclick="openBlogModal('post-3')">
+            <div class="blog-header-meta">
+              <span class="blog-category">Perspective</span>
+              <span class="blog-read-time"><i class="fa-regular fa-clock"></i> 3 min read</span>
+            </div>
+            <h3 class="blog-title">Why Communication is a Superpower in Tech & AI</h3>
+            <p class="blog-snippet">
+              Writing accurate code is essential, but explaining insights to humans is where true impact is made. Why soft skills are my secret weapon.
+            </p>
+            <div class="blog-card-footer">
+              <span class="read-more-link">Read Full Story <span>→</span></span>
+              <span class="blog-date">Dec 2024</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">get in touch</span>
+          <h2 class="section-title">Let's <span>Connect</span></h2>
+          <div class="title-underline"></div>
+          <p class="section-subtitle">
+            Whether you want to chat about Data Science, collaborate on a project, or just say hello!
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card contact-info-card">
+            <h3 class="contact-card-heading">Let's start a conversation 💌</h3>
+            <p class="contact-desc">
+              I am always excited to connect with fellow students, mentors, developers, and data enthusiasts. Drop me an email or find me on LinkedIn!
+            </p>
+
+            <div class="contact-methods">
+              <a href="mailto:dhanishthabhangale@gmail.com" class="contact-item">
+                <div class="contact-icon">
+                  <i class="fa-regular fa-envelope"></i>
+                </div>
+                <div class="contact-text">
+                  <span class="contact-title">Email Me</span>
+                  <span class="contact-value">dhanishthabhangale@gmail.com</span>
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/dhanishthabhangale" target="_blank" rel="noopener noreferrer" class="contact-item">
+                <div class="contact-icon">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+                <div class="contact-text">
+                  <span class="contact-title">LinkedIn</span>
+                  <span class="contact-value">linkedin.com/in/dhanishthabhangale</span>
+                </div>
+              </a>
+
+              <a href="https://github.com/Dhanishttha" target="_blank" rel="noopener noreferrer" class="contact-item">
+                <div class="contact-icon">
+                  <i class="fa-brands fa-github"></i>
+                </div>
+                <div class="contact-text">
+                  <span class="contact-title">GitHub</span>
+                  <span class="contact-value">github.com/Dhanishttha</span>
+                </div>
+              </a>
+            </div>
+
+            <div class="friendly-note">
+              <span>🌸</span>
+              <p>Looking forward to collaborating, learning, and growing together!</p>
+            </div>
+          </div>
+
+          <div class="contact-card contact-form-card">
+            <h3 class="contact-card-heading">Send a Quick Note 🎀</h3>
+            <form id="contact-form" onsubmit="handleFormSubmit(event)">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" placeholder="What's your name?" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" placeholder="example@domain.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" placeholder="What would you like to discuss?" required />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="4" placeholder="Write your sweet message here..." required></textarea>
+              </div>
+
+              <button type="submit" class="submit-btn" id="submit-btn">
+                <span>Send Message</span>
+                <i class="fa-regular fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Blog Modal -->
+  <div class="modal-overlay" id="blog-modal" onclick="closeBlogModalOnBackdrop(event)">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" onclick="closeBlogModal()" aria-label="Close article modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-content" id="modal-content-area">
+        <!-- Dynamically injected through script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toast-notification">
+    <span class="toast-icon">✨</span>
+    <span class="toast-text" id="toast-text">Message sent!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-signature">
+        <span class="footer-handwritten">Dhanishtha Bhangale</span>
+        <p>Crafted with lots of curiosity, sweet pink vibes & code 💖</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Dhanishtha Bhangale. All rights reserved.</p>
+        <a href="#hero" class="back-to-top" title="Scroll to top">
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
